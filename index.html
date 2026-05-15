@@ -3,422 +3,225 @@
 
 <head>
 
-    <meta name="google-site-verification" content="YZRtKuS4QVctjPzDV198xI3D2_f-ttHhXepcIIIhrX4" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SSLC Grade Calculator 2026</title>
 
-    <meta name="description"
-content="Free Kerala SSLC Grade Calculator 2026. Calculate estimated percentage, grade point, distinction and share beautiful result cards instantly.">
+<link rel="stylesheet" href="style.css">
 
-<meta name="keywords"
-content="SSLC Calculator, Kerala SSLC, SSLC Grade Calculator 2026, Percentage Calculator">
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-<meta property="og:title"
-content="SSLC Grade Calculator 2026">
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-<meta property="og:description"
-content="Calculate SSLC percentage and generate shareable grade cards instantly.">
-
-<meta property="og:image"
-content="https://sslcgrade.online/logo.png">
-
-<meta property="og:url"
-content="https://sslcgrade.online">
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        SSLC Grade Calculator 2026
-    </title>
-
-    <!-- GOOGLE FONT -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- RESULT POPUP OVERLAY -->
+<div class="container">
 
-    <div
-        class="popup-overlay"
-        id="popupOverlay"
-    ></div>
+    <!-- LOGO -->
 
-    <div class="container">
+    <div class="logo-section">
 
-        <!-- TOP BUTTON -->
-
-        <div class="top-info-btn-container">
-
-            <button
-                class="grading-btn"
-                onclick="openModal()"
-            >
-                Grading Scheme
-            </button>
-
-        </div>
-
-        <!-- HERO SECTION -->
-
-        <div class="hero">
-
-            <div class="hero-badge">
-                Kerala SSLC 2026
-            </div>
-
-            <h1>
-                SSLC Grade Calculator
-            </h1>
-
-            <p>
-                Calculate Estimated Percentage,
-                Grade Point & Final Grade
-            </p>
-
-        </div>
-
-        <!-- NAME INPUT -->
-
-        <div class="name-box">
-
-            <input
-                type="text"
-                id="studentName"
-                placeholder="Enter Your Name (Optional)"
-                maxlength="40"
-            >
-
-        </div>
-
-        <!-- SUBJECT LIST -->
-
-        <div
-            class="subjects"
-            id="subjects"
-        ></div>
-
-        <!-- CALCULATE BUTTON -->
-
-        <button
-            class="calculate-btn"
-            onclick="calculateResult()"
-        >
-            Calculate Result
-        </button>
-
-        <!-- RESULT CARD -->
-
-        <div
-            class="result-card"
-            id="resultCard"
-        >
-
-            <!-- CLOSE BUTTON -->
-
-            <button
-                class="close-result"
-                onclick="closeResultCard()"
-            >
-                ✕
-            </button>
-
-            <!-- HEADER -->
-
-            <div class="result-header">
-
-                <div class="result-badge">
-                    Kerala SSLC 2026
-                </div>
-
-                <h2>
-                    Grade Report
-                </h2>
-
-            </div>
-
-            <!-- RESULT DETAILS -->
-
-            <div
-                class="result-item"
-                id="tgp"
-            ></div>
-
-            <div
-                class="result-item"
-                id="percentage"
-            ></div>
-
-            <div
-                class="result-item"
-                id="cgpa"
-            ></div>
-
-            <div
-                class="result-item"
-                id="grade"
-            ></div>
-
-            <!-- SHARE PREVIEW -->
-
-            <div class="share-preview">
-
-                <!-- TOP -->
-
-                <div class="share-top">
-
-                    <div>
-
-                        <div class="report-badge">
-                            SSLC REPORT 2026
-                        </div>
-
-                        <h3>
-                            Kerala SSLC Grade Card
-                        </h3>
-
-                    </div>
-
-
-                </div>
-
-                <!-- NAME -->
-
-                <div
-                    class="share-name"
-                    id="shareName"
-                ></div>
-
-                <!-- GRADE SECTION -->
-
-                <div class="grade-layout">
-
-                    <!-- RESULT CIRCLE -->
-
-                    <div class="result-circle">
-
-                        <span id="circleGrade">
-                            A+
-                        </span>
-
-                    </div>
-
-                    <!-- DETAILS -->
-
-                    <div class="grade-details">
-
-                        <div
-                            class="share-grade"
-                            id="shareGrade"
-                        ></div>
-
-                        <div
-                            class="share-percentage"
-                            id="sharePercentage"
-                        ></div>
-
-                        <div
-                            class="share-cgpa"
-                            id="shareCGPA"
-                        ></div>
-
-                    </div>
-
-                </div>
-
-                <!-- FOOTER -->
-
-                <div class="share-footer">
-
-                    <span>
-                        Generated via sslcgrade.online
-                    </span>
-
-                </div>
-
-            </div>
-
-            <!-- SHARE BUTTON -->
-
-            <button
-                class="share-btn"
-                onclick="shareCard()"
-            >
-                Share Result Card
-            </button>
-
-        </div>
-
-        <!-- MODAL -->
-
-        <div
-            class="modal"
-            id="gradingModal"
-        >
-
-            <div class="modal-content">
-
-                <!-- CLOSE -->
-
-                <span
-                    class="close-btn"
-                    onclick="closeModal()"
-                >
-                    &times;
-                </span>
-
-                <h2>
-                    Kerala SSLC Grading System
-                </h2>
-
-                <!-- TABLE -->
-
-                <div class="table-wrapper">
-
-                    <table>
-
-                        <tr>
-                            <th>Grade</th>
-                            <th>Percentage</th>
-                            <th>Point</th>
-                        </tr>
-
-                        <tr>
-                            <td>A+</td>
-                            <td>90 - 100</td>
-                            <td>9</td>
-                        </tr>
-
-                        <tr>
-                            <td>A</td>
-                            <td>80 - 89</td>
-                            <td>8</td>
-                        </tr>
-
-                        <tr>
-                            <td>B+</td>
-                            <td>70 - 79</td>
-                            <td>7</td>
-                        </tr>
-
-                        <tr>
-                            <td>B</td>
-                            <td>60 - 69</td>
-                            <td>6</td>
-                        </tr>
-
-                        <tr>
-                            <td>C+</td>
-                            <td>50 - 59</td>
-                            <td>5</td>
-                        </tr>
-
-                        <tr>
-                            <td>C</td>
-                            <td>40 - 49</td>
-                            <td>4</td>
-                        </tr>
-
-                        <tr>
-                            <td>D+</td>
-                            <td>30 - 39</td>
-                            <td>3</td>
-                        </tr>
-
-                        <tr>
-                            <td>D</td>
-                            <td>20 - 29</td>
-                            <td>2</td>
-                        </tr>
-
-                        <tr>
-                            <td>E</td>
-                            <td>Below 20</td>
-                            <td>1</td>
-                        </tr>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- DISCLAIMER -->
-
-        <p class="disclaimer">
-
-            * This calculator provides estimated values
-            based on Kerala SSLC grading methodology
-            and is intended for informational purposes only.
-
-        </p>
-
-        <!-- FOOTER -->
-
-        <footer class="footer">
-
-            <div class="footer-content">
-
-                <span>
-                    Built for Kerala SSLC Students
-                </span>
-
-                <a
-                    href="https://codeleaf.co.in"
-                    target="_blank"
-                    class="codeleaf-tag"
-                >
-
-                    <img
-                        src="logo.png"
-                        alt="CodeLeaf Logo"
-                        class="codeleaf-logo"
-                    >
-
-                    <span>
-                        Crafted by CodeLeaf
-                    </span>
-
-                </a>
-
-            </div>
-
-        </footer>
+        <img src="Firefly.png"
+             class="wisdom-logo">
 
     </div>
 
-    <!-- SCRIPT -->
+    <!-- TITLE -->
 
-    <script src="script.js"></script>
+    <h1>
+        SSLC Grade Calculator 2026
+    </h1>
+
+    <!-- RESULT LINKS -->
+
+    <div class="result-links">
+
+        <h3>
+            Check SSLC Result First
+        </h3>
+
+        <a href="https://results.kite.kerala.gov.in"
+           target="_blank">
+
+           results.kite.kerala.gov.in
+
+        </a>
+
+        <a href="https://results.kerala.gov.in"
+           target="_blank">
+
+           results.kerala.gov.in
+
+        </a>
+
+        <a href="https://prd.kerala.gov.in"
+           target="_blank">
+
+           prd.kerala.gov.in
+
+        </a>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="form-box">
+
+        <!-- OPTIONAL NAME -->
+
+        <div class="input-box">
+
+            <label>
+                Student Name (Optional)
+            </label>
+
+            <input type="text"
+                   id="studentName"
+                   placeholder="Enter Student Name">
+
+        </div>
+
+        <!-- NOTE -->
+
+        <div class="note-box">
+
+            Maximum subjects allowed:
+            <strong>10</strong>
+
+        </div>
+
+        <!-- GRADE GRID -->
+
+        <div class="grade-grid">
+
+            <div class="grade-item">
+                <label>A+</label>
+                <input type="number" id="aplus" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>A</label>
+                <input type="number" id="a" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>B+</label>
+                <input type="number" id="bplus" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>B</label>
+                <input type="number" id="b" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>C+</label>
+                <input type="number" id="cplus" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>C</label>
+                <input type="number" id="c" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>D+</label>
+                <input type="number" id="dplus" value="0">
+            </div>
+
+            <div class="grade-item">
+                <label>D</label>
+                <input type="number" id="d" value="0">
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button class="calculate-btn"
+                onclick="calculateResult()">
+
+            Calculate Percentage
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="popup-overlay"
+     id="popupOverlay">
+
+</div>
+
+<div class="popup-card"
+     id="popupCard">
+
+    <button class="close-btn"
+            onclick="closePopup()">
+
+        ×
+
+    </button>
+
+    <h2>
+        Result
+    </h2>
+
+    <div class="popup-result">
+
+        <p id="popupName"></p>
+
+        <p id="percentage"></p>
+
+        <p id="grade"></p>
+
+        <p id="classification"></p>
+
+        <p id="tgp"></p>
+
+    </div>
+
+    <button class="copy-btn"
+            onclick="copyResult()">
+
+        Copy Result
+
+    </button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <a href="https://codeleaf.co.in"
+       target="_blank"
+       class="footer-brand">
+
+        <img src="logo.png"
+             class="footer-logo">
+
+        <span>
+            Crafted by Code Leaf
+        </span>
+
+    </a>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 
