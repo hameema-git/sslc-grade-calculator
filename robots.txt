@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sslcgrade.online/sitemap.xml
